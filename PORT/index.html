@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OM-DEV-PORTFOLIO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,400&display=swap" 
+     rel="stylesheet">
+
     <style>
       * {
         margin: 0;
@@ -25,7 +24,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 70px; 
+        height: 70px;
         background-color: rgb(1, 1, 69);
       }
       nav ul {
@@ -35,34 +34,58 @@
       nav ul li {
         list-style: none;
         margin: 0 23px;
-        
       }
-      .left{
+      nav ul li a {
+        text-decoration:none ;
+        color: white;
+       }
+      nav ul li a:hover {
+        color: rgb(100, 100, 185);
+        font-size: 1.02rem;
+        
+       }
+      
+      
+      .left {
         font-size: 1.5rem;
       }
-      .firstSection{
-           display:flex;
-           justify-content: space-around;
-           margin:32px 0;
-          }
-      .leftSection{
-        background-color: red;
-        width: ;
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 80px 0;
+      }
+      .firstSection > div {
+        width:30%;
+      }
 
-       }    
-        </style>
+      .leftSection {
+        font-size: 2rem;
+        margin: 50px ;
+        padding: 50px;
+      }
+
+      .rightSection img {
+        width: 80%;
+        margin: 50px -40px;
+      }
+      .purple{
+        color: rgb(140, 82, 195);
+      }
+    </style>
   </head>
+
   <body>
     <header>
       <nav>
         <div class="left">OM's Portfolio</div>
         <div class="right">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
+           <li><a href="/">Home</a> </li>
+           <li><a href="/">About</a> </li>
+           <li><a href="/">Services</a></li>
+           <li><a href="/">Projects</a></li>
+           <li><a href="/">Contact Me</a></li>
           </ul>
         </div>
       </nav>
@@ -70,9 +93,23 @@
 
     <main>
       <section class="firstSection">
-        <div class="leftSection">left</div>
-        <div class="rightSection">right</div>
+        <div class="leftSection">
+        Hi, My name is<span class="purple"> om </span>
+        <div>and I am an passionate</div>
+        <div>Web Developer</div>
+        <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="bg.png" alt="img" />
+        </div>
       </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+        strings: ['Web Devloper', 'Graphic Designer','Web Designer','Video Editor'],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>
